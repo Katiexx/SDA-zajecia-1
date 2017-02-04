@@ -1,18 +1,19 @@
-package zajecia;
+package zajecia.czwarte;
+
+import java.util.Scanner;
 
 /**
  * Created by RENT on 2017-02-04.
  */
 public class Zajecia4 {
     public static void main(String[] args) {
-       // printLessThen(5);
-       // printEvenLessThen(6);
-       // int sum = sumOfLessThen(6);
-        //System.out.println(sumOfLessThen(sum));
-        //System.out.println(celsjuszFahrenheit(10));
-        int [] array = {1,2,3,4,5,6,7,8};
-        statistic(array);
+
+
+        //int [] array = {1,2,3,4,5,6,7,8};
+        //statistic(array);
     }
+
+
 
     public static void statistic (int[] array){
         System.out.println("Sum of elements is: " + sumOf(array));
