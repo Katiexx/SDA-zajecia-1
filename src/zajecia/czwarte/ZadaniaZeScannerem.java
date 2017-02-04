@@ -7,6 +7,37 @@ import java.util.Scanner;
  */
 public class ZadaniaZeScannerem {
     public static void main(String[] args) {
+        calculator();
+    }
+
+    public static void calculator(){
+        System.out.println("1.Dodawanie");
+        System.out.println("2.Odejmowanie");
+        System.out.println("3.Mnozenie");
+        System.out.println("4.Dzielenie");
+
+        int operation = getNumberFromUser("Choose operation: ");
+            if (operation < 0 || operation > 4){
+                System.out.println("Wrong number");
+            }else {
+        int firstNumber = getNumberFromUser("Insert first number: ");
+        int secondNumber = getNumberFromUser("Insert second number: ");
+        if (operation == 1){
+            System.out.println(firstNumber + secondNumber);
+        }else if (operation == 2){
+            System.out.println(firstNumber - secondNumber);
+        }else if (operation == 3){
+            System.out.println(firstNumber * secondNumber);
+        }else if (operation == 4) {
+            if (secondNumber == 0) {
+                System.out.println("Nieprawidlowa liczba");
+            } else {
+                System.out.println(firstNumber / secondNumber);
+            }
+        }
+        }
+
+
     }
 
     public static double avgOfGrades() {
