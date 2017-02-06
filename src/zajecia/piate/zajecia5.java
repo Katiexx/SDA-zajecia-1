@@ -79,7 +79,7 @@ public class zajecia5 {
         int sum = 0;
         boolean flag = true;
         while (flag) {
-            int numberFromUser = ZadaniaZeScannerem.getNumberFromUser("Insert next number: ");
+            int numberFromUser = ZadaniaZeScannerem.getNumberFromUser("Insert your number: ");
             if (numberFromUser != 0) {
                 sum += numberFromUser;
             } else {
