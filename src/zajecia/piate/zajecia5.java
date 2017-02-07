@@ -9,17 +9,39 @@ import java.util.Random;
  */
 public class zajecia5 {
     public static void main(String[] args) {
-        //evenMatrix(5);
-        //oneMatrix(3);
-        //tree(3);
-        //triangle(5);
-        //square(3);
+
+        int [] orderedArray = homeWork();
+        printHomework(orderedArray);
+
         //System.out.println(sumOfNumbersFromUser());
         //printArray(arrayOfNumbersFromUser());
-        Random random = new Random();
-        int numberOfStepsToWin = game(random.nextInt(100));
-        System.out.println("Game over");
-        System.out.println("You've won after " + numberOfStepsToWin + " step/s");
+//        Random random = new Random();
+//        int numberOfStepsToWin = game(random.nextInt(100));
+//        System.out.println("Game over");
+//        System.out.println("You've won after " + numberOfStepsToWin + " step/s");
+    }
+
+    public static int[] homeWork() {
+        int[] array = new int[10];
+        boolean flag = true;
+        while (flag) {
+            int numberFromUser = ZadaniaZeScannerem.getNumberFromUser();
+            if (numberFromUser >= 0 && numberFromUser <= 9) {
+                array[numberFromUser]++;
+
+            } else {
+                flag = false;
+            }
+        }
+        return array;
+    }
+
+    public static void printHomework (int[] orderedArray) {
+        for (int i = 0; i < orderedArray.length; i++) {
+            for (int j = 0; j < orderedArray[i]; j++ ){
+                System.out.print(i);
+            }
+        }
     }
 
     public static int game(int number) {
