@@ -2,6 +2,8 @@ package zajecia.szoste;
 
 import zajecia.czwarte.ZadaniaZeScannerem;
 
+import java.util.Scanner;
+
 /**
  * Created by RENT on 2017-02-07.
  */
@@ -11,7 +13,28 @@ public class Zajecia6 {
         // System.out.println("You've entered " + numberOfElements + " numbers.");
         // int numberOfElements = avgUntil(15);
         //System.out.println("Insert " + numberOfElements + " numbers");
-        calculator();
+        // calculator();
+        System.out.println("Zakodowane: ");
+        String message = "Wojna";
+        String codded = cezarCode(message, 2);
+        System.out.println(codded);
+
+        System.out.println("Odkodowanie: ");
+        System.out.println(decodeCezarCode(codded, 2));
+    }
+
+    public static String cezarCode(String message, int key) {
+        char[] charArray = message.toCharArray();
+        for (int i = 0; i < charArray.length; i++) {
+            charArray[i] = (char) (charArray[i] + key);
+        }
+        return String.valueOf(charArray);
+
+    }
+
+    public static String decodeCezarCode(String coddedMessage, int key) {
+        return cezarCode(coddedMessage, -2);
+
     }
 
     public static void calculator() {
