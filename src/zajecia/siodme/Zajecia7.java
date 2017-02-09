@@ -13,8 +13,10 @@ public class Zajecia7 {
 //        String ala = "Ala_ma_kota";
 //        String convert = convertSpaces(ala);
 //        System.out.println(convert);
-        int sum = sumFromString("Kate has 2 cats i 7 dogs");
-        System.out.println(sum);
+//        int sum = sumFromString("Kate has 2 cats i 7 dogs");
+//        System.out.println(sum);
+//        boolean check = checkRoundBraces("92+3*(2+4*(5/7)))");
+//        System.out.println(check);
     }
 
     public static int[] stringStatistics(String message) {
@@ -88,7 +90,24 @@ public class Zajecia7 {
             if (charArray[i] >= 48 && charArray[i] <= 57) {
                 sum += charArray[i] - 48;
             }
-        } return sum;
+        }
+        return sum;
+    }
+
+    public static boolean checkRoundBraces(String message) {
+        char[] charArray = message.toCharArray();
+        int counter = 0;
+        for (int i = 0; i < charArray.length; i++) {
+            if (charArray[i] == '(') {
+                counter++;
+            } else if (charArray[i] == ')') {
+                counter--;
+                if (counter < 0) {
+                    break;
+                }
+            }
+        }
+        return counter == 0;
     }
 
 
