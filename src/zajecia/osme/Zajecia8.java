@@ -13,7 +13,35 @@ public class Zajecia8 {
         //System.out.println(sumOfNumberDigits(3123321));
 //        System.out.println(startsWith1("World is small", "World"));
 //        System.out.println(startsWith2("World is small", "World"));
-//        System.out.println(startsWith3("World is small", "World"));
+//     System.out.println(startsWith3("World is small", "World"));
+        String [] strings = split1("");
+    }
+
+    public static String[] split1(String message) {
+        return message.split(" ");
+    }
+
+    public static String [] split2(String message) {
+        String [] strings = new String [100];
+        int i = 0;
+        boolean flag = true;
+        int tmp = 0;
+        while (flag) {
+            int indexOfSpace = message.indexOf(' ', tmp);
+            String substring;
+            if (indexOfSpace == -1) {
+                substring = message.substring(tmp);
+            } else {
+                substring = message.substring(tmp, indexOfSpace);
+            }
+            tmp = indexOfSpace + 1;
+            strings[i] = substring;
+            i++;
+            if(indexOfSpace == -1){
+                flag = false;
+            }
+        }
+        return null;
     }
 
 
